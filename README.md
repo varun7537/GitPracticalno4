@@ -1,121 +1,78 @@
-SAPCT@CC-PC090 MINGW64 /d
-$ git clone https://github.com/varun7537/GitPracticalno4.git
-Cloning into 'GitPracticalno4'...
-remote: Enumerating objects: 3, done.
-remote: Counting objects: 100% (3/3), done.
-remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
-Receiving objects: 100% (3/3), done.
+**1. Clone the Repository
+You started by cloning a GitHub repository using the command:
 
-SAPCT@CC-PC090 MINGW64 /d
-$ cd GitPracticalno4
-
-SAPCT@CC-PC090 MINGW64 /d/GitPracticalno4 (main)
-$ git checkout -b mynewgitbranch
-Switched to a new branch 'mynewgitbranch'
-
-SAPCT@CC-PC090 MINGW64 /d/GitPracticalno4 (mynewgitbranch)
-$ touch index.html
-
-SAPCT@CC-PC090 MINGW64 /d/GitPracticalno4 (mynewgitbranch)
-$ touch style.css
-
-SAPCT@CC-PC090 MINGW64 /d/GitPracticalno4 (mynewgitbranch)
-$ touch script.js
-
-SAPCT@CC-PC090 MINGW64 /d/GitPracticalno4 (mynewgitbranch)
-$ touch config.php
-
-SAPCT@CC-PC090 MINGW64 /d/GitPracticalno4 (mynewgitbranch)
-$ ls
-README.md  config.php  index.html  script.js  style.css
-
-SAPCT@CC-PC090 MINGW64 /d/GitPracticalno4 (mynewgitbranch)
-$ git add --all
-
-SAPCT@CC-PC090 MINGW64 /d/GitPracticalno4 (mynewgitbranch)
-$ git status
-On branch mynewgitbranch
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        new file:   config.php
-        new file:   index.html
-        new file:   script.js
-        new file:   style.css
+git clone https://github.com/varun7537/GitPracticalno4.git
+This command makes a copy of the repository from GitHub to your local machine.
+After cloning, you entered the project directory GitPracticalno4 using cd GitPracticalno4.
+2. Create a New Branch
+You created a new branch for your feature development:
 
 
-SAPCT@CC-PC090 MINGW64 /d/GitPracticalno4 (mynewgitbranch)
-$ git commit -m "Describe your changes"
-[mynewgitbranch 5f4697d] Describe your changes
- 4 files changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 config.php
- create mode 100644 index.html
- create mode 100644 script.js
- create mode 100644 style.css
-
-SAPCT@CC-PC090 MINGW64 /d/GitPracticalno4 (mynewgitbranch)
-$ git push origin
-fatal: The current branch mynewgitbranch has no upstream branch.
-To push the current branch and set the remote as upstream, use
-
-    git push --set-upstream origin mynewgitbranch
-
-To have this happen automatically for branches without a tracking
-upstream, see 'push.autoSetupRemote' in 'git help config'.
+git checkout -b mynewgitbranch
+git checkout -b mynewgitbranch creates a new branch called mynewgitbranch and switches to it.
+This is where you will add your changes.
+3. Create New Files
+You created a few new files:
 
 
-SAPCT@CC-PC090 MINGW64 /d/GitPracticalno4 (mynewgitbranch)
-$ git push origin mynewgitbranch
-remote: Invalid username or password.
-fatal: Authentication failed for 'https://github.com/varun7537/GitPracticalno4.git/'
+touch index.html
+touch style.css
+touch script.js
+touch config.php
+These commands create four new empty files in your project: index.html, style.css, script.js, and config.php.
+4. Stage Your Changes
+You staged the files to be committed using:
 
-SAPCT@CC-PC090 MINGW64 /d/GitPracticalno4 (mynewgitbranch)
-$ git add remote origin https://github.com/varun7537/GitPracticalno4.git
-fatal: pathspec 'remote' did not match any files
 
-SAPCT@CC-PC090 MINGW64 /d/GitPracticalno4 (mynewgitbranch)
-$ git remote add origin https://github.com/varun7537/GitPracticalno4.git
-error: remote origin already exists.
+git add --all
+This adds all the new files to the "staging area," meaning Git will now track the changes you've made.
+5. Commit Your Changes
+You made a commit with a message:
 
-SAPCT@CC-PC090 MINGW64 /d/GitPracticalno4 (mynewgitbranch)
-$ git push origin mynewgitbranch
-Enumerating objects: 4, done.
-Counting objects: 100% (4/4), done.
-Delta compression using up to 12 threads
-Compressing objects: 100% (2/2), done.
-Writing objects: 100% (3/3), 321 bytes | 321.00 KiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
-remote:
+
+git commit -m "Describe your changes"
+This saves your changes to the branch with the message "Describe your changes". Git records these changes as a snapshot in the history.
+6. Push the Changes to GitHub
+You attempted to push the branch to GitHub using:
+
+
+git push origin mynewgitbranch
+The first time you tried this, you encountered an authentication issue (Invalid username or password).
+The issue might have been caused by an incorrect login or a need for GitHub authentication using a personal access token (PAT) instead of a password. This is a common issue when pushing to GitHub after the password authentication was deprecated.
+After this, you successfully pushed your branch:
+
+
+git push origin mynewgitbranch
+This command pushes the changes in your mynewgitbranch to the remote repository on GitHub.
+
+
 remote: Create a pull request for 'mynewgitbranch' on GitHub by visiting:
-remote:      https://github.com/varun7537/GitPracticalno4/pull/new/mynewgitbranch
-remote:
-To https://github.com/varun7537/GitPracticalno4.git
- * [new branch]      mynewgitbranch -> mynewgitbranch
+remote: https://github.com/varun7537/GitPracticalno4/pull/new/mynewgitbranch
+This message lets you know that your branch is now on GitHub and you can create a pull request (PR) to merge it with the main branch.
 
-SAPCT@CC-PC090 MINGW64 /d/GitPracticalno4 (mynewgitbranch)
-$ git checkout main
-Switched to branch 'main'
-Your branch is up to date with 'origin/main'.
 
-SAPCT@CC-PC090 MINGW64 /d/GitPracticalno4 (main)
-$ git pull origin main
-remote: Enumerating objects: 1, done.
-remote: Counting objects: 100% (1/1), done.
-remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
-Unpacking objects: 100% (1/1), 910 bytes | 910.00 KiB/s, done.
-From https://github.com/varun7537/GitPracticalno4
- * branch            main       -> FETCH_HEAD
-   4db299b..6d0cd6b  main       -> origin/main
-Updating 4db299b..6d0cd6b
-Fast-forward
- config.php | 0
- index.html | 0
- script.js  | 0
- style.css  | 0
- 4 files changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 config.php
- create mode 100644 index.html
- create mode 100644 script.js
- create mode 100644 style.css
+7. Switch Back to the Main Branch
+You switched back to the main branch using:
 
-SAPCT@CC-PC090 MINGW64 /d/GitPracticalno4 (main)
-$
+
+git checkout main
+This command switches you back to the main branch from the feature branch (mynewgitbranch).
+8. Pull Latest Changes
+You then pulled the latest changes from GitHub to ensure your local main branch is up to date:
+
+
+git pull origin main
+This command fetches and merges any new changes from the remote main branch on GitHub to your local main branch.
+Result
+Now, your main branch is up-to-date with the changes from the mynewgitbranch you pushed earlier. Your files (index.html, style.css, script.js, config.php) are also in sync with the changes from your new branch.
+
+Summary of What Happened:
+You cloned the repository from GitHub.
+You created a new branch called mynewgitbranch.
+You added new files (index.html, style.css, script.js, config.php).
+You staged and committed the changes.
+You pushed the changes to GitHub.
+You switched back to the main branch and pulled the latest changes.
+Next Steps:
+On GitHub, you can now create a Pull Request (PR) to merge your mynewgitbranch into the main branch. This allows teammates to review and approve the changes before they are merged into the main project.
+Let me know if you need more help with any of these steps!**
